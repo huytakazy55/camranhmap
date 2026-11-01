@@ -1,0 +1,42 @@
+services:
+  api:
+    build: ./api
+    restart: unless-stopped
+    environment:
+      Admin__Key: ${ADMIN_PASSWORD:-}
+    volumes:
+      - api-data:/data
+    ports:
+      - "127.0.0.1:5080:8080"   # chỉ để chạy `npm run dev` trên máy; bỏ dòng này khi lên máy chủ
+
+  web:
+    build:
+      context: ./web
+      args:
+        # Các biến NEXT_PUBLIC_* được gắn vào mã trình duyệt lúc build.
+        NEXT_PUBLIC_ARCGIS_API_KEY: ${NEXT_PUBLIC_ARCGIS_API_KEY:-}
+        NEXT_PUBLIC_IMAGERY_URL: ${NEXT_PUBLIC_IMAGERY_URL:-}
+        NEXT_PUBLIC_IMAGERY_MAXZOOM: ${NEXT_PUBLIC_IMAGERY_MAXZOOM:-}
+        NEXT_PUBLIC_IMAGERY_ATTRIBUTION: ${NEXT_PUBLIC_IMAGERY_ATTRIBUTION:-}
+    restart: unless-stopped
+    environment:
+      API_URL: http://api:8080
+      SITE_URL: ${SITE_URL:-http://localhost:8080}
+      ALLOW_INDEXING: ${ALLOW_INDEXING:-false}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+    depends_on:
+      - api
+
+  nginx:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-8080}:80"
+    volumes:
+      - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./web/public/tiles:/usr/share/nginx/tiles:ro
+    depends_on:
+      - web
+
+volumes:
+  api-data:

@@ -1,0 +1,27 @@
+{
+  "name": "camranh-3d-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "copy-worker": "node scripts/copy-worker.mjs",
+    "predev": "npm run copy-worker",
+    "dev": "next dev",
+    "prebuild": "npm run copy-worker",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "maplibre-gl": "^6.16.0",
+    "next": "^16.4.3",
+    "pmtiles": "^4.5.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.0"
+  }
+}

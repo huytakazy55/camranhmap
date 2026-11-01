@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ccp-01",
+    "type": "Nhà phố",
+    "title": "Cam Ranh Central Park – Shophouse góc",
+    "price": "5,2 tỷ",
+    "area": "100 m²",
+    "lng": 109.1385,
+    "lat": 11.9035,
+    "polygon": [[109.1381,11.9038],[109.1390,11.9038],[109.1390,11.9032],[109.1381,11.9032]],
+    "info": { "Hướng": "Đông Nam", "Pháp lý": "Sổ hồng", "Mặt tiền": "Đường Lê Duẩn", "Số tầng": "4" },
+    "desc": "DỮ LIỆU MẪU – thay bằng thông tin thật. Vị trí trung tâm, gần vịnh Cam Ranh.",
+    "phone": "0972055399",
+    "image": "https://placehold.co/600x360?text=Cam+Ranh+Central+Park"
+  },
+  {
+    "id": "land-01",
+    "type": "Đất nền",
+    "title": "Lô đất view vịnh Cam Ranh",
+    "price": "2,1 tỷ",
+    "area": "150 m²",
+    "lng": 109.1720,
+    "lat": 11.9300,
+    "polygon": [[109.1716,11.9303],[109.1724,11.9303],[109.1724,11.9297],[109.1716,11.9297]],
+    "info": { "Hướng": "Đông", "Pháp lý": "Sổ đỏ", "Đường": "Nhựa 12m" },
+    "desc": "DỮ LIỆU MẪU – thay bằng thông tin thật.",
+    "phone": "0900000000",
+    "image": "https://placehold.co/600x360?text=Dat+nen"
+  },
+  {
+    "id": "villa-01",
+    "type": "Biệt thự",
+    "title": "Biệt thự ven biển Bãi Dài",
+    "price": "12 tỷ",
+    "area": "300 m²",
+    "lng": 109.2275,
+    "lat": 11.9715,
+    "polygon": [[109.2270,11.9719],[109.2280,11.9719],[109.2280,11.9711],[109.2270,11.9711]],
+    "info": { "Hướng": "Đông Bắc", "Pháp lý": "Sổ hồng", "Cách biển": "200 m" },
+    "desc": "DỮ LIỆU MẪU – thay bằng thông tin thật.",
+    "phone": "0900000000",
+    "image": "https://placehold.co/600x360?text=Biet+thu"
+  }
+]

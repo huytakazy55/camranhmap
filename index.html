@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cam Ranh 3D – Bản đồ bất động sản</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <aside id="list">
+    <h1>Cam Ranh <span>3D</span></h1>
+    <p class="sub">Bất động sản trên bản đồ</p>
+    <div id="filters"></div>
+    <ul id="items"></ul>
+  </aside>
+
+  <section id="detail" hidden>
+    <button id="close" aria-label="Đóng">×</button>
+    <img id="d-img" alt="" />
+    <div class="body">
+      <span id="d-type" class="tag"></span>
+      <h2 id="d-title"></h2>
+      <div id="d-price"></div>
+      <dl id="d-info"></dl>
+      <p id="d-desc"></p>
+      <a id="d-call" class="cta"></a>
+      <button id="d-orbit" class="ghost">Xoay 360° quanh vị trí</button>
+    </div>
+  </section>
+
+  <section id="view">
+    <h3>Góc nhìn 3D</h3>
+    <div class="presets">
+      <button data-pitch="0">Từ trên xuống</button>
+      <button data-pitch="45">Xiên 45°</button>
+      <button data-pitch="70">Bay thấp</button>
+      <button data-pitch="85">Tầm mắt</button>
+    </div>
+    <div class="presets looks">
+      <button data-look="day" class="on">☀️ Ban ngày</button>
+      <button data-look="dusk">🌇 Hoàng hôn</button>
+      <button id="b-cine" class="wide">▶ Quay phim quảng cáo</button>
+      <button id="b-boxes" class="wide">Khối nhà 3D trên ảnh vệ tinh: Tắt</button>
+      <button id="b-clean" class="wide">Ẩn giao diện</button>
+    </div>
+    <label>Độ nghiêng <output id="o-pitch"></output><input id="s-pitch" type="range" min="0" max="85" step="1" /></label>
+    <label>Hướng nhìn <output id="o-bearing"></output><input id="s-bearing" type="range" min="-180" max="180" step="1" /></label>
+    <label>Độ cao nhà <output id="o-bh"></output><input id="s-bh" type="range" min="1" max="4" step="0.25" value="1" /></label>
+    <label>Độ cao địa hình <output id="o-th"></output><input id="s-th" type="range" min="0" max="4" step="0.25" value="1" /></label>
+  </section>
+
+  <button id="show-ui" hidden>Hiện giao diện</button>
+
+  <div id="tools">
+    <button data-style="sat">Vệ tinh</button>
+    <button data-style="map" class="on">Bản đồ</button>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

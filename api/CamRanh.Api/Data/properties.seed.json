@@ -1,0 +1,60 @@
+[
+  {
+    "id": "ccp-01",
+    "slug": "shophouse-goc-cam-ranh-central-park",
+    "type": "Nhà phố",
+    "title": "Cam Ranh Central Park – Shophouse góc",
+    "priceVnd": 5200000000,
+    "areaM2": 100,
+    "lng": 109.1385,
+    "lat": 11.9035,
+    "polygon": [[109.1381,11.9038],[109.1390,11.9038],[109.1390,11.9032],[109.1381,11.9032]],
+    "info": [
+      { "label": "Hướng", "value": "Đông Nam" },
+      { "label": "Pháp lý", "value": "Sổ hồng" },
+      { "label": "Mặt tiền", "value": "Đường Lê Duẩn" },
+      { "label": "Số tầng", "value": "4" }
+    ],
+    "desc": "DỮ LIỆU MẪU – thay bằng thông tin thật. Vị trí trung tâm, gần vịnh Cam Ranh.",
+    "phone": "0972055399",
+    "image": "https://placehold.co/600x360?text=Cam+Ranh+Central+Park"
+  },
+  {
+    "id": "land-01",
+    "slug": "dat-nen-view-vinh-cam-ranh",
+    "type": "Đất nền",
+    "title": "Lô đất view vịnh Cam Ranh",
+    "priceVnd": 2100000000,
+    "areaM2": 150,
+    "lng": 109.1720,
+    "lat": 11.9300,
+    "polygon": [[109.1716,11.9303],[109.1724,11.9303],[109.1724,11.9297],[109.1716,11.9297]],
+    "info": [
+      { "label": "Hướng", "value": "Đông" },
+      { "label": "Pháp lý", "value": "Sổ đỏ" },
+      { "label": "Đường", "value": "Nhựa 12m" }
+    ],
+    "desc": "DỮ LIỆU MẪU – thay bằng thông tin thật.",
+    "phone": "0900000000",
+    "image": "https://placehold.co/600x360?text=Dat+nen"
+  },
+  {
+    "id": "villa-01",
+    "slug": "biet-thu-ven-bien-bai-dai",
+    "type": "Biệt thự",
+    "title": "Biệt thự ven biển Bãi Dài",
+    "priceVnd": 12000000000,
+    "areaM2": 300,
+    "lng": 109.2275,
+    "lat": 11.9715,
+    "polygon": [[109.2270,11.9719],[109.2280,11.9719],[109.2280,11.9711],[109.2270,11.9711]],
+    "info": [
+      { "label": "Hướng", "value": "Đông Bắc" },
+      { "label": "Pháp lý", "value": "Sổ hồng" },
+      { "label": "Cách biển", "value": "200 m" }
+    ],
+    "desc": "DỮ LIỆU MẪU – thay bằng thông tin thật.",
+    "phone": "0900000000",
+    "image": "https://placehold.co/600x360?text=Biet+thu"
+  }
+]

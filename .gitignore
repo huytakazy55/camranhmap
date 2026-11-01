@@ -1,0 +1,38 @@
+# ── Bí mật: KHÔNG bao giờ đưa lên git ──────────────────────────
+# Chứa khóa ArcGIS, ADMIN_PASSWORD. Chỉ giữ file mẫu .env.example.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ── Thư viện & kết quả build ───────────────────────────────────
+node_modules/
+dist/
+web/.next/
+web/next-env.d.ts
+*.tsbuildinfo
+# do `npm run copy-worker` tự chép
+web/public/maplibre/
+**/bin/
+**/obj/
+
+# ── Dữ liệu chạy thật ──────────────────────────────────────────
+# Dữ liệu bất động sản do người dùng nhập (api/.../App_Data khi chạy ngoài Docker).
+App_Data/
+# Dữ liệu nguồn để dựng bản đồ (~2 GB: OSM, CHM, shapefile...). Dựng lại bằng scripts/.
+# Chỉ khóa thư mục /data ở gốc, không động tới src/data hay api/.../Data.
+/data/
+*.tif
+*.pbf
+# Dữ liệu cây (đã gỡ khỏi app) và bản sao cũ của app Vite (bản dùng thật nằm ở web/public/tiles).
+public/*.pmtiles
+public/*.bin
+
+# ── Rác của máy / trình soạn thảo ──────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.log
+# Next.js tự sinh khi chạy `npm run dev`
+web/AGENTS.md
